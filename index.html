@@ -67,6 +67,13 @@
                 <div class="layer layer-3"></div>
             </div>
         </section>
+        <section class="druabble" id="druabble">
+            <div class="block-landings-project">
+                <div class="bg-content">
+                    <img id="sqconstruction" class="sqbuilding" src="images/project-desktop.png" alt="">
+                </div>
+            </div>
+        </section>
         
         <script src="" async defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
@@ -74,6 +81,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+     
+      
 
         <script>
             gsap.to('.layer-1', {y: '-100vh', delay: .5});
@@ -93,6 +102,23 @@
             gsap.fromTo('.circle-large', 
             {x: '30rem', opacity: 0},
             {x: '0', opacity: 1, ease: 'back.out(1.7)', delay: 1});
+
+
+            Draggable.create(sqconstruction, {
+                type: "x",
+                inertia: true,
+                bounds: druabble,
+                zIndexBoost: false,
+                //edgeResistance: -0.7,
+                dragClickables: true,
+                minimumMovement: 5
+            });
+
+            // gsap.fromTo('.sqbuilding', 
+            // {x: '0'},
+            // {x: '-85rem', ease: 'Power0.easeout', delay: 1});
+            
+           gsap.to('.sqbuilding', {x: '-85rem', ease: 'Power0.easeOut',delay: 1.5, duration: 4});
         </script>
         
         <!--

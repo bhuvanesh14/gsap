@@ -190,3 +190,16 @@ header{
 .layer-3{
     flex: 1;
 }
+
+.druabble {
+    
+    overflow:hidden;
+}
+
+.druabble .block-landings-project .bg-content {
+    width: 156.25vw;
+}
+
+.druabble .block-landings-project .bg-content img {
+    width:100%;
+}
